@@ -246,7 +246,7 @@ L.Marker.MovingMarker = L.Marker.extend({
             if (stationDuration !== undefined) {
                 if (elapsedTime < stationDuration) {
                     this.setLatLng(this._latlngs[lineIndex + 1]);				
-					
+					document.getElementById("demo").innerHTML = this.getLatLng();
 					L.circle(this.getLatLng(), 80, {color: "#ff7800", weight: 2}).addTo(map);					  
                     return null;
                 }
