@@ -258,7 +258,7 @@ L.Marker.MovingMarker = L.Marker.extend({
 					  	L.circleMarker(this.getLatLng(), {color: element.innerHTML.toString(), opacity:0.05,weight: this._counts[lineIndex+1]}).addTo(map);
 					}
 					else{
-						L.circleMarker(this.getLatLng(), {color: '#ff7800', opacity:0.4,weight: this._counts[lineIndex]}).addTo(map);					  
+						L.circleMarker(this.getLatLng(), {color: '#ff7800', opacity:0.4,weight: this._counts[lineIndex+1]}).addTo(map);					  
 					}
                     return null;
                 }
