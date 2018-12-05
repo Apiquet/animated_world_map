@@ -8,6 +8,6 @@ Then, I updated a js script with **the number of markers** I want, the **locatio
 
 As everything is generic, I can update the number of markers and the speed from a global variable in the python code. 
 
-I finally got a world map with markers which draw each protest location in sequence.
+I finally got a world map with markers which draw each protest location in sequence thanks to the MovingMarker script (from: https://github.com/ewoken/Leaflet.MovingMarker) that I had to adapt to my needs.
 
 Please open the **index.html** in  'Leaflet.MovingMarker-master\animated_map\' to see the result.
