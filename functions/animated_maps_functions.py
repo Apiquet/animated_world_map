@@ -50,6 +50,7 @@ def updating_js_script(df, SCRIPT_PATH, markers_number=4, markers_speed=0.01, La
             marker_declaration = marker_declaration + "\n var marker" + str(marker_idx) + " = L.Marker.movingMarker(protests_coordinates" + str(marker_idx) + ",protests_dates1,protests_types" + str(marker_idx) +"," + str(simulation_duration) + ", {autostart: true}).addTo(map);"
 
     mapfit = 'var map = new L.Map(\'map\', {center:'+LatLong+',zoom:'+zoom+'});map.addLayer(layer);'
+    
     readFile = open(SCRIPT_PATH + "script_origin.js")
 
     lines = readFile.readlines()
@@ -71,3 +72,17 @@ def updating_js_script(df, SCRIPT_PATH, markers_number=4, markers_speed=0.01, La
     w.writelines([item for item in lines])
 
     w.close()
+    
+def converting_count_to_color(minimum, maximum, value):
+    minimum, maximum = float(minimum), float(maximum)
+    ratio = (value-minimum) / (maximum - minimum)
+    b = 0
+    r = 0
+    g = 255
+    if ratio < 0.2:
+        b = 255 * (-5*ratio+1)
+        r = 255 * (-2*ratio+1)
+    else:
+        g = 255 * (-1.66*ratio + 0.86)
+    hexa = '#%02x%02x%02x' % (int(r), int(g), int(b))
+    return '"' + hexa + '"'
