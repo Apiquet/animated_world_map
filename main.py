@@ -1,32 +1,16 @@
 
-# coding: utf-8
-
-# In[7]:
-
-
-from google.cloud import bigquery
+#from google.cloud import bigquery
 import pandas as pd
 import numpy as np
 import os
 import json
 import folium
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-from IPython.core.display import display, HTML
-from IPython.core.display import Image, display
-
-from sklearn.linear_model import LinearRegression, LogisticRegression
 from branca.colormap import linear
-import statsmodels.api as sm
-from scipy import stats
 from functions.folium_functions import *
 from functions.dataframe_functions import *
 from functions.getting_tables import *
 from functions.animated_maps_functions import *
 from functions.stats_functions import *
-
-import seaborn as sns
-from math import pi
 
 
 DATA_PATH = "data/"
@@ -94,6 +78,7 @@ if os.path.isfile(DATA_PATH + 'protests_df_raw_1.csv') and os.path.isfile(DATA_P
     protests_df_raw_2 = pd.read_csv(DATA_PATH + 'protests_df_raw_2.csv')
     
 else:
+    '''
     query_protests = bigquery_client.query(
         """SELECT GLOBALEVENTID as ID, ActionGeo_CountryCode as CountryCode,  EventCode,MonthYear,NumMentions,AvgTone, Year FROM `gdelt-bq.gdeltv2.events` 
         WHERE EventCode LIKE '14%' """)
@@ -104,7 +89,7 @@ else:
     
     protests_df_raw_1.to_csv(DATA_PATH + 'protests_df_raw_1.csv', index=False)
     protests_df_raw_2.to_csv(DATA_PATH + 'protests_df_raw_2.csv', index=False)
-
+    '''
 protests_df_raw = pd.concat([protests_df_raw_1, protests_df_raw_2], ignore_index=True)    
 protests_df = protests_df_raw.dropna()
 
