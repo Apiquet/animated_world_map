@@ -1,9 +1,6 @@
-# LINKS:
+# Animated world map
 
-Github: https://github.com/Apiquet/animated_world_map
-
-My website: https://anthonypiquet.wordpress.com/2018/12/04/displaying-data-on-an-animated-world-map/
-
+Project: https://apiquet.com/2018/12/04/displaying-data-on-an-animated-world-map/
 
 # DESCRIPTION:
 
