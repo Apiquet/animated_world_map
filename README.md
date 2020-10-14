@@ -2,7 +2,7 @@
 
 Project: https://apiquet.com/2018/12/04/displaying-data-on-an-animated-world-map/
 
-### DESCRIPTION:
+## Description:
 
 The objective was creating animated maps which displays the protests locations, frequency and kind (Engage in political dissent, Conduct strike or boycott, hunger strike, etc) 
 day by day. This project asked me knowledge in Python and JavaScript, HTML/CSS.
@@ -22,7 +22,7 @@ Please open the **visualizing_main_maps.html** in 'animated_world_map\' to see t
 
 
 
-### HOW TO RUN:
+## How to run:
 
 You may need to install packages:
 	- branca
